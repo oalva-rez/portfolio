@@ -29,7 +29,7 @@ nav ul li {
 }
 .nav--selected a::before {
   content: "• ";
-  color: #fdb827;
+  color: var(--accent-color);
   left: -10px;
   top: 1px;
   position: absolute;

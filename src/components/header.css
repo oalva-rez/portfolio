@@ -1,11 +1,10 @@
 header {
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 13%,
-    rgba(74, 74, 74, 1) 100%
-  );
+  background: var(--black-gradient);
   display: grid;
+  border-bottom: 1px solid rgb(29, 29, 29);
+  position: relative;
+  z-index: 999;
 }
 .desktop--header {
   place-content: center;
@@ -43,7 +42,7 @@ nav ul li {
 /* --------------------- Mobile Nav --------------------- */
 
 .bm-burger-button {
-  position: fixed;
+  position: absolute;
   width: 19px;
   height: 16px;
   left: 17px;
@@ -70,7 +69,7 @@ nav ul li {
   Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
   */
 .bm-menu-wrap {
-  position: fixed;
+  position: absolute;
   height: 100%;
 }
 

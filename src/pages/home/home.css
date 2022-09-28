@@ -1,0 +1,128 @@
+.home--container {
+  display: grid;
+  place-content: center;
+}
+
+.home--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 670px;
+  margin: 0 40px;
+  color: white;
+  z-index: 500;
+}
+.home--text h1 {
+  font-size: 64px;
+  text-align: center;
+}
+.home--text p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home--buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+.home--buttons > * {
+  height: 49px;
+  padding: 0 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.home--buttons > *:first-child {
+  color: white;
+  background: rgba(255, 255, 255, 0.13);
+}
+.home--buttons > *:last-child {
+  background-color: #fdb827;
+  color: black;
+}
+.home--avatar {
+  position: absolute;
+  width: 407px;
+  height: 407px;
+
+  z-index: 0;
+  left: 120px;
+}
+.home--arm {
+  position: absolute;
+  width: 362px;
+  height: 362px;
+  bottom: 0px;
+  right: 50px;
+}
+
+@media (max-width: 1480px) {
+  .home--avatar {
+    left: 20px;
+  }
+}
+@media (max-width: 1246px) {
+  .home--avatar {
+    height: 320px;
+    width: 320px;
+    left: -2%;
+  }
+  .home--arm {
+    height: 300px;
+    width: 300px;
+    right: 40px;
+  }
+}
+@media (max-width: 1074px) {
+  .home--avatar {
+    height: 280px;
+    width: 280px;
+    left: 1%;
+    top: 40px;
+  }
+  .home--arm {
+    display: none;
+  }
+}
+@media (max-width: 1074px) {
+  .home--avatar {
+    height: 280px;
+    width: 280px;
+    left: 5%;
+    top: 50px;
+  }
+}
+@media (max-width: 720px) {
+  .App {
+    height: 100vh;
+    display: grid;
+    grid-template: 60px 1fr max-content / 1fr;
+  }
+  .home--avatar {
+    top: 30px;
+    left: -5%;
+  }
+  .home--text {
+    margin: 150px 40px 40px;
+  }
+  .home--text h1 {
+    font-size: 48px;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 10px;
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 720px) {
+  .home--avatar {
+    top: 60px;
+    left: -18%;
+  }
+}

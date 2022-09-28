@@ -1,0 +1,100 @@
+.projects--heading {
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.project-tile {
+  color: white;
+  display: flex;
+
+  height: 230px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 19px;
+}
+.project-tile--image {
+  height: 100%;
+  width: 210px;
+}
+.project-tile--image img {
+  height: 100%;
+  width: 210px;
+  object-fit: cover;
+  border-radius: 19px;
+}
+.project-tile--image img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* tile text */
+.project-tile--text {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-tile--text h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+.project-tile--text p {
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 8px;
+  flex: 1;
+}
+
+.project-tile--links a,
+.project-tile--links {
+  color: white;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.tech-logo {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+  padding-bottom: 8px;
+}
+
+/* project list */
+
+.project-list {
+  width: 80vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 463px));
+  place-items: center;
+  place-content: center;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 1182px) {
+  .project-tile {
+    flex-direction: column;
+    height: max-content;
+  }
+  .project-tile--text {
+    text-align: center;
+  }
+  .project-tile--text {
+    flex: 1;
+  }
+  .project-tile--image {
+    height: 200px;
+    width: 100%;
+  }
+  .project-tile--image img {
+    height: 200px;
+    width: 100%;
+    object-position: left top;
+  }
+  .tech-logo {
+    padding: 8px 0px;
+  }
+}

@@ -1,9 +1,9 @@
-import karozImg from "./assets/karoz-img.png";
-import sensuro from "./assets/sensuro.png";
-import restaurantPage from "./assets/restaurant-page.png";
-import cvGenerator from "./assets/cv-generator.png";
-import premy from "./assets/premy.png";
-import quizApp from "./assets/quiz-app.png";
+import karozImg from "./assets/karoz-img.webp";
+import sensuro from "./assets/sensuro.webp";
+import restaurantPage from "./assets/restaurant-page.webp";
+import cvGenerator from "./assets/cv-generator.webp";
+import premy from "./assets/premy.webp";
+import quizApp from "./assets/quiz-app.webp";
 import css from "./assets/css.png";
 import html from "./assets/html.png";
 import js from "./assets/js.png";
@@ -27,7 +27,7 @@ const projectsData = [
     id: 2,
     title: "Shopping Cart",
     description:
-      "Shopping cart website built with React. Implemented TDD practices using Jest and React Testing Library. Uses React Router v6 for routing and URL params for product ID.",
+      "Mock store website built with React. Implements TDD practices using Jest and React Testing Library. Uses React Router v6 for routing and URL params for product ID.",
     image: sensuro,
     ghLink: "https://github.com/oalva-rez/shopping-cart",
     siteLink: "#",

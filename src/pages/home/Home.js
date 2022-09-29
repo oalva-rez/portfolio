@@ -1,6 +1,6 @@
 import React from "react";
-import homeAvatar from "../../assets/home-avatar.png";
-import arm from "../../assets/arm.png";
+import homeAvatar from "../../assets/home-avatar.webp";
+import arm from "../../assets/arm.webp";
 export default function Home() {
   return (
     <main className="home--container">

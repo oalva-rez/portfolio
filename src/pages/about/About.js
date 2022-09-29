@@ -1,9 +1,9 @@
 import React from "react";
-import aboutAvatar from "../../assets/about-avatar.png";
+import aboutAvatar from "../../assets/about-avatar.webp";
 
 export default function About() {
   return (
-    <main className="main--container">
+    <main className="about--container">
       <div className="about--heading">
         <img src={aboutAvatar} alt="avatar on desk" className="about--avatar" />
         <h1>

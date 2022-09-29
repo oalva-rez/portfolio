@@ -12,7 +12,7 @@ header {
 nav ul {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-left: 25px;
   gap: 5rem;
   list-style: none;
 }
@@ -21,7 +21,6 @@ nav ul a {
   text-decoration: none;
   color: white;
   font-weight: 500;
-  font-size: 14px;
 }
 nav ul li {
   position: relative;
@@ -101,7 +100,8 @@ nav ul li {
   gap: 1.8rem;
 }
 .bm-item a {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  border-bottom: 1px solid white;
 }
 .bm-item a::before {
   left: -14px;

@@ -23,10 +23,12 @@
   width: 210px;
   object-fit: cover;
   border-radius: 19px;
+  opacity: 0.8;
 }
 .project-tile--image img:hover {
-  opacity: 0.5;
+  opacity: 1;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 /* tile text */
@@ -70,7 +72,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 463px));
   place-items: center;
   place-content: center;
-  gap: 20px;
+  gap: 40px;
   padding-bottom: 30px;
 }
 

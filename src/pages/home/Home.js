@@ -1,7 +1,9 @@
 import React from "react";
 import homeAvatar from "../../assets/home-avatar.webp";
 import arm from "../../assets/arm.webp";
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <main className="home--container">
       <div className="home--text">
@@ -17,8 +19,8 @@ export default function Home() {
           sunt recusandae vitae repellendus dolore!
         </p>
         <div className="home--buttons">
-          <button>About me</button>
-          <button>Portfolio</button>
+          <button onClick={() => navigate("/about")}>About me</button>
+          <button onClick={() => navigate("/projects")}>Projects</button>
         </div>
       </div>
       <img src={homeAvatar} alt="avatar" className="home--avatar" />

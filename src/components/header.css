@@ -12,7 +12,7 @@ header {
 nav ul {
   display: flex;
   justify-content: center;
-  padding-left: 25px;
+  padding-left: 30px;
   gap: 5rem;
   list-style: none;
 }
@@ -22,6 +22,7 @@ nav ul a {
   color: white;
   font-weight: 500;
 }
+
 nav ul li {
   position: relative;
 }
@@ -29,7 +30,7 @@ nav ul li {
   content: "• ";
   color: var(--accent-color);
   left: -10px;
-  top: 1px;
+  top: -1px;
   position: absolute;
 }
 .mobile--h1 {
@@ -47,6 +48,7 @@ nav ul li {
   left: 17px;
   top: 22px;
 }
+
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: white;
@@ -104,11 +106,30 @@ nav ul li {
   border-bottom: 1px solid white;
 }
 .bm-item a::before {
-  left: -14px;
+  left: -17px;
   top: -2px;
 }
 
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 720px) {
+  nav ul a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  nav ul a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }

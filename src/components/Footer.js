@@ -13,7 +13,13 @@ export default function Footer() {
         </a>
       </div>
       <div>
-        <a href="#">Source code available</a>
+        <a
+          href="https://github.com/oalva-rez/portfolio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Source code available
+        </a>
       </div>
     </footer>
   );

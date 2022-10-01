@@ -19,7 +19,7 @@ const projectsData = [
     description:
       "A mobile responsive Kanban board app for managing your projects. Built with React, ContextAPI for state management, and Firebase.",
     image: karozImg,
-    ghLink: "https://github.com/oalva-rez/karoz",
+    ghLink: "https://github.com/oalva-rez/karoz/tree/firebase",
     siteLink: "https://karoz-3c7bb.web.app/",
     tech: [html, css, react, firebase],
   },
@@ -30,7 +30,7 @@ const projectsData = [
       "Mock store website built with React. Implements TDD practices using Jest and React Testing Library. Uses React Router v6 for routing and URL params for product ID.",
     image: sensuro,
     ghLink: "https://github.com/oalva-rez/shopping-cart",
-    siteLink: "#",
+    siteLink: "https://shopping-cart123.web.app",
     tech: [html, css, react, jest],
   },
   {

@@ -44,6 +44,7 @@
   color: var(--accent-color);
   text-decoration: none;
 }
+
 .contact--container form p a:hover {
   text-decoration: underline;
 }

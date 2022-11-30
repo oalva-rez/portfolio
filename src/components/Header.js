@@ -19,7 +19,6 @@ export default function Header({ isMobile }) {
     const title = pathArray[pathArray.length - 1];
     return title.charAt(0).toUpperCase() + title.slice(1);
   }
-  console.log(formatPathToTitle(pathname));
   if (isMobile) {
     return (
       <header>

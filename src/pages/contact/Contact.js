@@ -10,14 +10,16 @@ export default function Contact() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log("running");
-    fetch("http://localhost:3001/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
+    fetch(
+      "https://portfolio-emailer.netlify.app/.netlify/functions/api/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    ).then((res) => {
       if (res.status === 200) {
         alert("Woohoo! Message sent.");
         reset({ name: "", email: "", message: "", subject: "" });

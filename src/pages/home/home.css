@@ -1,12 +1,12 @@
 .home--container {
-  display: grid;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home--text {
   display: flex;
   flex-direction: column;
-  align-items: center;
   max-width: 670px;
   margin: 0 40px;
   color: white;
@@ -14,10 +14,8 @@
 }
 .home--text h1 {
   font-size: 64px;
-  text-align: center;
 }
 .home--text p {
-  text-align: center;
   margin-top: 20px;
 }
 
@@ -43,56 +41,44 @@
   background-color: var(--accent-color);
   color: black;
 }
-.home--avatar {
-  position: absolute;
-  width: 407px;
-  height: 407px;
+.ozkar-headshot {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: relative;
+  bottom: -5px;
+}
+.home--image {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  margin: 40px 40px 40px 0px;
+}
+@media (max-width: 1216px) {
+  .ozkar-headshot {
+    max-width: 350px;
+    max-height: 350px;
+  }
+}
+@media (max-width: 914px) {
+  .ozkar-headshot {
+    max-width: 300px;
+    max-height: 300px;
+    bottom: 0;
+  }
+  .home--container {
+    flex-direction: column-reverse;
+  }
+  .home--text {
+    text-align: center;
+  }
+  .home--image {
+    margin: 40px;
 
-  z-index: 0;
-  left: 120px;
-}
-.home--arm {
-  position: absolute;
-  width: 362px;
-  height: 362px;
-  bottom: 0px;
-  right: 50px;
-}
-
-@media (max-width: 1480px) {
-  .home--avatar {
-    left: 20px;
+    display: flex;
+    justify-content: center;
   }
-}
-@media (max-width: 1246px) {
-  .home--avatar {
-    height: 320px;
-    width: 320px;
-    left: -2%;
-  }
-  .home--arm {
-    height: 300px;
-    width: 300px;
-    right: 40px;
-  }
-}
-@media (max-width: 1074px) {
-  .home--avatar {
-    height: 280px;
-    width: 280px;
-    left: 1%;
-    top: 40px;
-  }
-  .home--arm {
-    display: none;
-  }
-}
-@media (max-width: 1074px) {
-  .home--avatar {
-    height: 280px;
-    width: 280px;
-    left: 5%;
-    top: 50px;
+  .home--buttons {
+    justify-content: center;
   }
 }
 @media (max-width: 720px) {
@@ -101,12 +87,9 @@
     display: grid;
     grid-template: 60px 1fr max-content / 1fr;
   }
-  .home--avatar {
-    top: 30px;
-    left: -5%;
-  }
+
   .home--text {
-    margin: 70px 40px 40px;
+    margin: 0 40px 40px;
   }
   .home--text h1 {
     font-size: 48px;
@@ -117,12 +100,5 @@
     justify-content: baseline;
     gap: 10px;
     padding: 20px 10px;
-  }
-}
-@media (max-width: 720px) {
-  .home--avatar {
-    top: 60px;
-    left: -18%;
-    opacity: 0.5;
   }
 }

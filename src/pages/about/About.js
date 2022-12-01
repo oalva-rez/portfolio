@@ -15,47 +15,47 @@ export default function About() {
         </h1>
       </div>
       <div className="about--main-text">
-        <h3>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, porro.
-        </h3>
+        <h2>It all started with Python</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ad
-          soluta labore necessitatibus, eaque hic voluptate sit natus! Tenetur
-          in facere incidunt? Dolorem delectus, quaerat animi eum voluptas enim
-          architecto eaque ullam quibusdam iusto iure debitis quas reiciendis
-          ipsum? Expedita aliquam reiciendis sunt repellendus iste minus
-          doloremque, eaque error veniam in illum suscipit repellat, quibusdam
-          iure accusantium mollitia nemo sed obcaecati enim consequatur! Quae
-          dignissimos provident earum labore porro minima dolore odit iure
-          pariatur eaque?
+          Interested in many things, I started learning Python in 2021. I dove
+          deeper into the software development rabbit hole and came out with a
+          fascination for coding. After two months of writing python code, I
+          decided to chose a pathway which was most aligned with my interests.{" "}
+          <i>Building things.</i> I started learning HTML, CSS, and Javascript.
+          Built several projects with vanilla Javascript before jumping into any
+          frameworks. This allowed me to really solidify my understanding of the
+          fundamentals of Javascript. I then started learning React and have
+          been building projects with it ever since.
         </p>
-        <h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem.
-        </h3>
+        <h2>Academics</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius alias
-          minima tempore nesciunt qui odio inventore. Modi consectetur ut
-          nostrum, a consequuntur sunt repudiandae, iure libero quo dolorem est
-          laudantium explicabo porro consequatur dolor excepturi ipsa, quas
-          harum. Doloribus velit dolores facilis enim rerum corporis alias,
-          totam at doloremque autem incidunt, dolorum repudiandae nostrum, quam
-          saepe quis culpa aliquam nihil amet ut cum aperiam quidem? Molestias
-          facere eaque ad voluptatem ipsum cumque corrupti, rem illo
-          consectetur! Libero ea mollitia repudiandae nisi! Omnis ratione eos
-          deserunt sint tempore fugiat adipisci maiores soluta exercitationem
-          quos numquam dolorem vitae totam velit repudiandae mollitia, excepturi
-          aspernatur explicabo earum ipsa, dolores illum, harum accusantium?
-          Accusantium officia exercitationem ipsum vitae porro repellat velit
-          repellendus ducimus aut!
+          Learning has been a passion of mine since I was a kid. After high
+          school, I decided to pursue a degree in Structural Engineering. I
+          attended San Diego Mesa Community College, where I took high level
+          math and physics courses to prepare me for the rigorous engineering
+          curriculum. My interests in engineering were heavy, however I soon
+          realized that I was much more interested in the software side of
+          things. I decided to switch my major to Web Development and have been
+          learning ever since.
         </p>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam quod
-          ipsam optio perspiciatis, maxime dicta. Nisi culpa autem id
-          exercitationem quo optio voluptate in laboriosam qui dolore, nesciunt
-          iusto enim sequi ipsum. Vitae odio hic quos sequi quas, architecto
-          veniam!
+          Mesa College Web Development Program has allowed me to expand my
+          knowledge by exposing me to many different technologies. I have
+          learned how to build full stack applications using, Express, Node.js,
+          PHP with databases such as MySQL, MongoDB and firebase. React,
+          Angular, and Vue were also covered in the program. I was also exposed
+          to UX practices along with simulating client proposals. I am expected
+          to graduate by June 2023.
         </p>
+        <h2>Technologies i've been working with lately</h2>
+        <ul>
+          <li>Javascript (ES6+)</li>
+          <li>Typescript</li>
+          <li>React</li>
+          <li>Node.js / Express</li>
+          <li>MongoDB</li>
+          <li>MySQL</li>
+        </ul>
       </div>
     </main>
   );

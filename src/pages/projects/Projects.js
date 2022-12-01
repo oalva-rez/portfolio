@@ -4,7 +4,7 @@ import projectsData from "../../projectsData";
 export default function Projects() {
   return (
     <main>
-      <h1 className="projects--heading">What i've done.</h1>
+      <h1 className="projects--heading">What i've created.</h1>
       <ul className="project-list">
         {projectsData.map((project) => (
           <ProjectTile

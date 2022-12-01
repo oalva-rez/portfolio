@@ -1,30 +1,31 @@
 import React from "react";
-import homeAvatar from "../../assets/home-avatar.webp";
-import arm from "../../assets/arm.webp";
+import ozkar from "../../assets/ozkar.png";
 import { useNavigate } from "react-router-dom";
 export default function Home() {
   const navigate = useNavigate();
   return (
     <main className="home--container">
-      <div className="home--text">
+      <section className="home--text">
         <h1>
           Hey there 👋
           <br />I am
           <span> Ozkar&nbsp;Alvarez</span>
         </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-          eveniet nihil quod. Ab tempore consequatur veritatis aliquam
-          laboriosam unde voluptatibus aliquid sed obcaecati, iusto ipsum eum
-          sunt recusandae vitae repellendus dolore!
+          Self taught Frontend Developer, passionate about learning new things
+          and sharing my knowledge with others. I love to create things that
+          live on the internet, whether that be websites, applications, or
+          anything in between. My goal is to always build products that provide
+          pixel-perfect, performant experiences.
         </p>
         <div className="home--buttons">
           <button onClick={() => navigate("/about")}>About me</button>
           <button onClick={() => navigate("/projects")}>Projects</button>
         </div>
+      </section>
+      <div className="home--image">
+        <img src={ozkar} alt="ozkar" className="ozkar-headshot" />
       </div>
-      <img src={homeAvatar} alt="avatar" className="home--avatar" />
-      <img src={arm} alt="arm" className="home--arm" />
     </main>
   );
 }

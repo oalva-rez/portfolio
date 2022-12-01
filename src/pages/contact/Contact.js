@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import avatar from "../../assets/contact-avatar.webp";
 
@@ -6,10 +6,26 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+  const onSubmit = (data) => {
+    console.log("running");
+    fetch("http://localhost:3001/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) {
+        alert("Woohoo! Message sent.");
+        reset({ name: "", email: "", message: "", subject: "" });
+      } else {
+        alert("Oops! Something went wrong.");
+      }
+    });
+  };
 
   return (
     <main className="contact--container">
@@ -31,25 +47,25 @@ export default function Contact() {
           type="text"
           placeholder="Name"
           className="contact--name"
-          {...register("Name", { required: true, maxLength: 80 })}
+          {...register("name", { required: true, maxLength: 80 })}
         />
         <input
           type="text"
           placeholder="Email"
           className="contact--email"
-          {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+          {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
         />
         <input
           type="text"
           placeholder="Subject"
           className="contact--subject"
-          {...register("Subject", { required: true, maxLength: 12 })}
+          {...register("subject", { required: true, maxLength: 12 })}
         />
         <textarea
           placeholder="Message"
           style={{ fontFamily: "inherit" }}
           className="contact--message"
-          {...register("Message", { required: true, min: 0 })}
+          {...register("message", { required: true, min: 0 })}
         />
         <input type="submit" />
       </form>

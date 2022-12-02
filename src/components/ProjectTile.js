@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function ProjectTile({
   title,
@@ -20,11 +19,18 @@ export default function ProjectTile({
         <h3>{title}</h3>
         <p>{description}</p>
         <div className="project-tile--tech">
-          {tech.map((tech, index) => (
-            <span key={index}>
-              <img src={tech} alt="tech" className="tech-logo" />
-            </span>
-          ))}
+          {tech.map((tech, index) => {
+            return (
+              <span key={index}>
+                <img
+                  src={tech.image}
+                  alt="tech"
+                  className="tech-logo"
+                  title={tech.name}
+                />
+              </span>
+            );
+          })}
         </div>
         <div className="project-tile--links">
           <a href={ghLink} target="_blank" rel="noreferrer">

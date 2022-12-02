@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import avatar from "../../assets/contact-avatar.webp";
+import MoonLoader from "react-spinners/ClipLoader";
 
 export default function Contact() {
+  const [isSending, setIsSending] = useState(false);
+
+  const override = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    margin: "0 auto",
+  };
+
   const {
     register,
     handleSubmit,
@@ -10,6 +20,7 @@ export default function Contact() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
+    setIsSending(true);
     fetch(
       "https://portfolio-emailer.netlify.app/.netlify/functions/api/contact",
       {
@@ -21,9 +32,11 @@ export default function Contact() {
       }
     ).then((res) => {
       if (res.status === 200) {
+        setIsSending(false);
         alert("Woohoo! Message sent.");
         reset({ name: "", email: "", message: "", subject: "" });
       } else {
+        setIsSending(false);
         alert("Oops! Something went wrong.");
       }
     });
@@ -36,6 +49,16 @@ export default function Contact() {
       <div className="contact--heading">
         <h1>Get in touch.</h1>
       </div>
+      {isSending ? (
+        <MoonLoader
+          color={"#fdb827"}
+          loading={isSending}
+          cssOverride={override}
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      ) : null}
       <form onSubmit={handleSubmit(onSubmit)}>
         <p>
           You can shoot me an email @:&nbsp;

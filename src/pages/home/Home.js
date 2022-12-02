@@ -1,5 +1,5 @@
 import React from "react";
-import ozkar from "../../assets/ozkar.png";
+import ozkar from "../../assets/ozkar.webp";
 import { useNavigate } from "react-router-dom";
 export default function Home() {
   const navigate = useNavigate();

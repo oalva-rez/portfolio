@@ -24,7 +24,14 @@ export default function Home() {
           anything in between. My goal is to always build products that provide
           pixel-perfect, performant experiences.
         </p>
+
+        <div className="home--buttons">
+          <button onClick={() => navigate("/about")}>About me</button>
+          <button onClick={() => navigate("/projects")}>Projects</button>
+        </div>
+        <hr />
         <h2 className="home--tech-heading">Ozkar's Stack</h2>
+
         <ul className="home--tech">
           <li>
             <img src={ts} alt="typescript" title="Typescript" />
@@ -45,10 +52,6 @@ export default function Home() {
             <img src={mysql} alt="mysql" title="MySQL" />
           </li>
         </ul>
-        <div className="home--buttons">
-          <button onClick={() => navigate("/about")}>About me</button>
-          <button onClick={() => navigate("/projects")}>Projects</button>
-        </div>
       </section>
       <div className="home--image">
         <img src={ozkar} alt="ozkar" className="ozkar-headshot" />

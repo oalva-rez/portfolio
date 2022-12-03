@@ -31,6 +31,10 @@
   margin-top: 10px;
   list-style: none;
 }
+.home--container hr {
+  margin-top: 35px;
+  border-color: rgba(255, 255, 255, 0.151);
+}
 .home--tech img {
   height: 45px;
   margin-right: 10px;
@@ -119,5 +123,11 @@
     justify-content: baseline;
     gap: 10px;
     padding: 20px 10px;
+  }
+}
+
+@media (max-width: 417px) {
+  .home--tech img {
+    margin-right: 5px;
   }
 }

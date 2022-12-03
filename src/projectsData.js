@@ -51,7 +51,7 @@ const projectsData = [
     id: 3,
     title: "Restaurant Page",
     description:
-      "Final project for Creating User-centered Content class. Built with vanilla JavaScript and webpack for bundling. Simulated a client proposal for a mobile responsive restaurant page.",
+      "Final project for UX course called Creating User-centered Content. Built with vanilla JavaScript and webpack for bundling. Simulated a client proposal for a mobile responsive restaurant page.",
     image: restaurantPage,
     ghLink: "https://github.com/oalva-rez/restaurant-page",
     siteLink: "https://oalva-rez.github.io/restaurant-page/",

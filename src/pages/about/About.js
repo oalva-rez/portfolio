@@ -8,14 +8,14 @@ export default function About() {
         <img src={aboutAvatar} alt="avatar on desk" className="about--avatar" />
         <h1>
           I'm Ozkar Alvarez. <br />A{" "}
-          <span className="frontend-text">frontend</span> react developer.{" "}
+          <span className="frontend-text">fullstack</span> React developer.{" "}
           <br />
           Turning ideas into real life{" "}
           <span className="products-text">products</span> is my passion.
         </h1>
       </div>
       <div className="about--main-text">
-        <h2>It all started with Python</h2>
+        <h2>It all started with a HelloWorld.py script</h2>
         <p>
           Interested in many things, I started learning Python in 2021. I dove
           deeper into the software development rabbit hole and came out with a

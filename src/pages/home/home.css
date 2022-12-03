@@ -18,7 +18,23 @@
 .home--text p {
   margin-top: 20px;
 }
-
+.home--tech-heading {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  opacity: 0.8;
+}
+.home--tech {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  list-style: none;
+}
+.home--tech img {
+  height: 45px;
+  margin-right: 10px;
+}
 .home--buttons {
   margin-top: 25px;
   display: flex;
@@ -75,6 +91,9 @@
     margin: 40px;
 
     display: flex;
+    justify-content: center;
+  }
+  .home--tech {
     justify-content: center;
   }
   .home--buttons {

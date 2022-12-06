@@ -9,7 +9,7 @@ export default function Footer() {
           <i className="fa-brands fa-github"></i>
         </a>
         <a
-          href="linkedin.com/in/ozkar-alvarez-391929259"
+          href="https://linkedin.com/in/ozkar-alvarez-391929259"
           target="_blank"
           rel="noreferrer"
         >

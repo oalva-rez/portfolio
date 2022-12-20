@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap");
+
 .about--container {
   padding: 0 70px;
   max-width: 1900px;
@@ -31,9 +33,9 @@
   font-weight: 700;
   margin-top: 30px;
   font-size: 2rem;
-  border-left: 8px solid var(--accent-color);
+  border-left: 4px solid var(--accent-color);
   padding: 0 8px;
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.067);
   width: fit-content;
 }
@@ -48,6 +50,11 @@
   columns: 2;
   margin-left: 20px;
   max-width: 400px;
+}
+.py-script {
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  opacity: 0.8;
 }
 @media (max-width: 857px) {
   .about--container {

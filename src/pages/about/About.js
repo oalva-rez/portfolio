@@ -15,17 +15,20 @@ export default function About() {
         </h1>
       </div>
       <div className="about--main-text">
-        <h2>It all started with a HelloWorld.py script</h2>
+        <h2>
+          It all started with a <span className="py-script">HelloWorld.py</span>{" "}
+          script.
+        </h2>
         <p>
           Interested in many things, I started learning Python in 2021. I dove
           deeper into the software development rabbit hole and came out with a
           fascination for coding. After two months of writing python code, I
           decided to chose a pathway which was most aligned with my interests.{" "}
-          <i>Building things.</i> I started learning HTML, CSS, and Javascript.
-          Built several projects with vanilla Javascript before jumping into any
-          frameworks. This allowed me to really solidify my understanding of the
-          fundamentals of Javascript. I then started learning React and have
-          been building projects with it ever since.
+          <i>Developing products.</i> I started learning HTML, CSS, and
+          Javascript. Built several projects with vanilla Javascript before
+          jumping into any frameworks. This allowed me to really solidify my
+          understanding of the fundamentals of Javascript. I then started
+          learning React and have been building projects with it ever since.
         </p>
         <h2>Academics</h2>
         <p>
@@ -47,7 +50,7 @@ export default function About() {
           to UX practices along with simulating client proposals. I am expected
           to graduate by June 2023.
         </p>
-        <h2>Technologies i've been working with lately</h2>
+        <h2>Technologies I've been working with lately.</h2>
         <ul>
           <li>Javascript (ES6+)</li>
           <li>Typescript</li>

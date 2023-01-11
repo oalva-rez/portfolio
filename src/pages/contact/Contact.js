@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import avatar from "../../assets/contact-avatar.webp";
 import MoonLoader from "react-spinners/ClipLoader";
+import { Helmet } from "react-helmet";
 
 export default function Contact() {
   const [isSending, setIsSending] = useState(false);
@@ -44,6 +45,17 @@ export default function Contact() {
 
   return (
     <main className="contact--container">
+      <Helmet>
+        <title>Ozkar Alvarez | Contact</title>
+        <meta
+          name="description"
+          content="Get in touch with me, a web developer with experience in creating responsive, 
+          user-friendly websites and web applications. My contact page provides several ways for 
+          you to get in touch with me, including an email form and my contact information. If you 
+          have any questions about my work, or if you're interested in collaborating on a project, 
+          please don't hesitate to reach out. I'm always happy to discuss potential opportunities."
+        />
+      </Helmet>
       <img src={avatar} alt="avatar" className="contact--avatar" />
 
       <div className="contact--heading">

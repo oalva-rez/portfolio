@@ -1,9 +1,21 @@
 import React from "react";
 import aboutAvatar from "../../assets/about-avatar.webp";
+import { Helmet } from "react-helmet";
 
 export default function About() {
   return (
     <main className="about--container">
+      <Helmet>
+        <title>Ozkar Alvarez | About</title>
+        <meta
+          name="description"
+          content="Learn more about me, a web developer with a passion for creating visually appealing 
+          and highly functional websites and web applications. On my about page, you'll find information 
+          about my skills, experience, and background in web development. You can also read about my academic journey, 
+          which have helped shape the way I approach my work. Check out my portfolio to see some 
+          examples of my recent projects, and feel free to contact me if you have any questions."
+        />
+      </Helmet>
       <div className="about--heading">
         <img src={aboutAvatar} alt="avatar on desk" className="about--avatar" />
         <h1>
@@ -24,7 +36,7 @@ export default function About() {
           deeper into the software development rabbit hole and came out with a
           fascination for coding. After two months of writing python code, I
           decided to chose a pathway which was most aligned with my interests.{" "}
-          <i>Developing products.</i> I started learning HTML, CSS, and
+          <i>Developing products.</i> I started learning HTML5, CSS3, and
           Javascript. Built several projects with vanilla Javascript before
           jumping into any frameworks. This allowed me to really solidify my
           understanding of the fundamentals of Javascript. I then started

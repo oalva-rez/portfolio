@@ -7,10 +7,23 @@ import mongodb from "../../assets/mongodb.png";
 import mysql from "../../assets/mysql.png";
 import ts from "../../assets/typescript.png";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 export default function Home() {
   const navigate = useNavigate();
   return (
     <main className="home--container">
+      <Helmet>
+        <title>Ozkar Alvarez</title>
+        <meta
+          name="description"
+          content="Get to know Ozkar Alvarez's Web Development journey. 
+          I am a web developer with experience in building responsive, user-friendly websites and web applications.
+          From HTML and CSS to JavaScript and React, I have a diverse skill set that allows me to deliver 
+          projects of varying complexity. Browse my portfolio to see some of my recent work, and feel 
+          free to contact me to discuss potential collaborations."
+        />
+      </Helmet>
       <section className="home--text">
         <h1>
           Hey there 👋

@@ -62,7 +62,13 @@
   font-size: 13px;
   font-weight: 400;
 }
-
+.project-tile--wip {
+  color: #ff6f6f;
+  font-size: 13px;
+  font-weight: 400;
+  padding-top: 8px;
+  font-style: italic;
+}
 .tech-logo {
   min-height: 25px;
   width: 25px;

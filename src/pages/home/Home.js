@@ -31,10 +31,10 @@ export default function Home() {
           <span> Ozkar&nbsp;Alvarez</span>
         </h1>
         <p>
-          Self taught Fullstack Developer, passionate about learning new things
-          and sharing my knowledge with others. I love to create things that
-          live on the internet, whether that be websites, applications, or
-          anything in between. My goal is to always build products that provide
+          Fullstack Developer, passionate about learning new things and sharing
+          my knowledge with others. I love to create things that live on the
+          internet, whether that be websites, applications, or anything in
+          between. My goal is to always build products that provide
           pixel-perfect, performant experiences.
         </p>
 
@@ -43,7 +43,7 @@ export default function Home() {
           <button onClick={() => navigate("/projects")}>Projects</button>
         </div>
         <hr />
-        <h2 className="home--tech-heading">Ozkar's Stack</h2>
+        <h2 className="home--tech-heading">Ozkar's Choice</h2>
 
         <ul className="home--tech">
           <li>

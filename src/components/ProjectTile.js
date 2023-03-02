@@ -7,6 +7,7 @@ export default function ProjectTile({
   ghLink,
   siteLink,
   tech,
+  isWIP,
 }) {
   return (
     <li className="project-tile">
@@ -17,6 +18,7 @@ export default function ProjectTile({
       </div>
       <div className="project-tile--text">
         <h3>{title}</h3>
+        {isWIP && <h2 className="project-tile--wip">Work In Progress</h2>}
         <p>{description}</p>
         <div className="project-tile--tech">
           {tech.map((tech, index) => {

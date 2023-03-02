@@ -6,6 +6,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Projects from "./pages/projects/Projects";
+import Error from "./pages/404/Error";
 
 function App() {
   const [isMobile, setIsMobile] = useState(
@@ -31,10 +32,11 @@ function App() {
       <BrowserRouter>
         <Header isMobile={isMobile} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/projects" element={<Projects />} />
+          <Route exact path="*" element={<Error />} />
         </Routes>
         <Footer />
       </BrowserRouter>

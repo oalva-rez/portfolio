@@ -5,6 +5,8 @@ import cvGenerator from "./assets/cv-generator.webp";
 import lazyReader from "./assets/lazyreader.webp";
 import premy from "./assets/premy.webp";
 import quizApp from "./assets/quiz-app.webp";
+import audiophile from "./assets/audiophile.png";
+import customCms from "./assets/custom-cms.png";
 import css from "./assets/css.png";
 import html from "./assets/html.png";
 import js from "./assets/js.png";
@@ -15,8 +17,43 @@ import webpack from "./assets/webpack.png";
 import nodejs from "./assets/nodejs.png";
 import express from "./assets/express.png";
 import mongodb from "./assets/mongodb.png";
+import typescript from "./assets/typescript.png";
+import aws from "./assets/aws.png";
 
 const projectsData = [
+  {
+    id: 34954958,
+    title: "Portfolio CMS",
+    description: "This app allows me to update my portfolio website using a CMS UI and a, user specific, generated API key and API end point.",
+    image: customCms,
+    ghLink: "https://github.com/oalva-rez/karoz/tree/firebase",
+    siteLink: "https://karoz-3c7bb.web.app/",
+    tech: [
+      { image: css, name: "css" },
+      { image: react, name: "react" },
+      { image: nodejs, name: "nodejs" },
+      { image: express, name: "express" },
+      { image: mongodb, name: "mongodb" },
+      { image: aws, name: "aws" },
+
+    ],
+    isWIP: true,
+  },
+  {
+    id: 34958,
+    title: "Audiophile",
+    description:
+      "A fully responsive, e-commerce website for audio equipment. Built with React, and typescript. Uses React Router v6 for routing and URL params for product ID.",
+    image: audiophile,
+    ghLink: "https://github.com/oalva-rez/karoz/tree/firebase",
+    siteLink: "https://karoz-3c7bb.web.app/",
+    tech: [
+      { image: css, name: "css" },
+      { image: typescript, name: "typescript" },
+      { image: react, name: "react" },
+    ],
+    isWIP: true,
+  },
   {
     id: 1,
     title: "Karoz",
@@ -26,11 +63,11 @@ const projectsData = [
     ghLink: "https://github.com/oalva-rez/karoz/tree/firebase",
     siteLink: "https://karoz-3c7bb.web.app/",
     tech: [
-      { image: html, name: "html" },
       { image: css, name: "css" },
       { image: react, name: "react" },
       { image: firebase, name: "firebase" },
     ],
+    isWIP: false,
   },
   {
     id: 2,
@@ -41,11 +78,11 @@ const projectsData = [
     ghLink: "https://github.com/oalva-rez/shopping-cart",
     siteLink: "https://shopping-cart123.web.app",
     tech: [
-      { image: html, name: "html" },
       { image: css, name: "css" },
       { image: react, name: "react" },
       { image: jest, name: "jest" },
     ],
+    isWIP: false,
   },
   {
     id: 3,
@@ -61,6 +98,7 @@ const projectsData = [
       { image: js, name: "javascript" },
       { image: webpack, name: "webpack" },
     ],
+    isWIP: false,
   },
   {
     id: 4,
@@ -71,13 +109,13 @@ const projectsData = [
     ghLink: "https://github.com/oalva-rez/LazyReader-Frontend",
     siteLink: "https://lazyreader456.web.app/",
     tech: [
-      { image: html, name: "html" },
       { image: css, name: "css" },
       { image: react, name: "react" },
       { image: nodejs, name: "nodejs" },
       { image: express, name: "express" },
       { image: mongodb, name: "mongodb" },
     ],
+    isWIP: false,
   },
   {
     id: 5,
@@ -88,10 +126,10 @@ const projectsData = [
     ghLink: "https://github.com/oalva-rez/cv-generator",
     siteLink: "https://oalva-rez.github.io/cv-generator/",
     tech: [
-      { image: html, name: "html" },
       { image: css, name: "css" },
       { image: react, name: "react" },
     ],
+    isWIP: false,
   },
   {
     id: 6,
@@ -107,6 +145,7 @@ const projectsData = [
       { image: js, name: "javascript" },
       { image: webpack, name: "webpack" },
     ],
+    isWIP: false,
   },
   {
     id: 7,
@@ -117,10 +156,10 @@ const projectsData = [
     ghLink: "https://github.com/oalva-rez/quiz-app",
     siteLink: "https://oalva-rez.github.io/quiz-app/",
     tech: [
-      { image: html, name: "html" },
       { image: css, name: "css" },
       { image: react, name: "react" },
     ],
+    isWIP: false,
   },
 ];
 

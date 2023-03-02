@@ -19,10 +19,9 @@ export default function Projects() {
       </Helmet>
       <h1 className="projects--heading">What i've created.</h1>
       <p className="projects--text">
-        What started as a simple "Hello World!" script in early 2021 to the many
-        projects I have since devoted my hard work to. Web Development has
-        become more than a hobby but a passion that stems from my love to
-        engineer and build out my ideas.{" "}
+        Web Development has become more than a hobby but a passion that stems
+        from my love to engineer and build out my ideas. Here is some proof to
+        my craft.
       </p>
       <ul className="project-list">
         {projectsData.map((project) => (
@@ -34,6 +33,7 @@ export default function Projects() {
             ghLink={project.ghLink}
             siteLink={project.siteLink}
             tech={project.tech}
+            isWIP={project.isWIP}
           />
         ))}
       </ul>

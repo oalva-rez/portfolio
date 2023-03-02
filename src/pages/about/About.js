@@ -32,12 +32,12 @@ export default function About() {
           script.
         </h2>
         <p>
-          Interested in many things, I started learning Python in 2021. I dove
-          deeper into the software development rabbit hole and came out with a
-          fascination for coding. After two months of writing python code, I
-          decided to chose a pathway which was most aligned with my interests.{" "}
-          <i>Developing products.</i> I started learning HTML5, CSS3, and
-          Javascript. Built several projects with vanilla Javascript before
+          Interested in many things, I started learning Python a couple years
+          back. I dove deeper into the software development rabbit hole and came
+          out with a fascination for coding. After two months of writing python
+          code, I decided to chose a pathway which was most aligned with my
+          interests. <i>Developing products.</i> I started learning HTML5, CSS3,
+          and Javascript. Built several projects with vanilla Javascript before
           jumping into any frameworks. This allowed me to really solidify my
           understanding of the fundamentals of Javascript. I then started
           learning React and have been building projects with it ever since.

@@ -24,10 +24,11 @@ const projectsData = [
   {
     id: 34954958,
     title: "Portfolio CMS",
-    description: "This app allows me to update my portfolio website using a CMS UI and a, user specific, generated API key and API end point.",
+    description:
+      "This app allows me to update my portfolio website using a CMS UI and a, user specific, generated API key and API end point.",
     image: customCms,
-    ghLink: "https://github.com/oalva-rez/karoz/tree/firebase",
-    siteLink: "https://karoz-3c7bb.web.app/",
+    ghLink: "https://github.com/oalva-rez/custom-cms/tree/master",
+    siteLink: "",
     tech: [
       { image: css, name: "css" },
       { image: react, name: "react" },
@@ -35,7 +36,6 @@ const projectsData = [
       { image: express, name: "express" },
       { image: mongodb, name: "mongodb" },
       { image: aws, name: "aws" },
-
     ],
     isWIP: true,
   },
@@ -45,8 +45,8 @@ const projectsData = [
     description:
       "A fully responsive, e-commerce website for audio equipment. Built with React, and typescript. Uses React Router v6 for routing and URL params for product ID.",
     image: audiophile,
-    ghLink: "https://github.com/oalva-rez/karoz/tree/firebase",
-    siteLink: "https://karoz-3c7bb.web.app/",
+    ghLink: "https://github.com/oalva-rez/audiophile",
+    siteLink: "https://audiophile-10.web.app/",
     tech: [
       { image: css, name: "css" },
       { image: typescript, name: "typescript" },

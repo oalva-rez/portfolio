@@ -38,10 +38,14 @@ export default function ProjectTile({
           <a href={ghLink} target="_blank" rel="noreferrer">
             View Code
           </a>{" "}
-          |{" "}
-          <a href={siteLink} target="_blank" rel="noreferrer">
-            View Site
-          </a>
+          {siteLink !== "" ? (
+            <>
+              |{" "}
+              <a href={siteLink} target="_blank" rel="noreferrer">
+                View Site
+              </a>
+            </>
+          ) : null}
         </div>
       </div>
     </li>

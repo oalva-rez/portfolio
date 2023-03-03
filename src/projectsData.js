@@ -25,7 +25,7 @@ const projectsData = [
     id: 34954958,
     title: "Portfolio CMS",
     description:
-      "This app allows me to update my portfolio website using a CMS UI and a, user specific, generated API key and API end point.",
+      "A CMS platform allowing users to update their portfolio content through a dashboard UI using generated API keys and user API endpoints.",
     image: customCms,
     ghLink: "https://github.com/oalva-rez/custom-cms/tree/master",
     siteLink: "",
@@ -58,7 +58,7 @@ const projectsData = [
     id: 1,
     title: "Karoz",
     description:
-      "A mobile responsive Kanban board app for managing your projects. Built with React, ContextAPI for state management, and Firebase.",
+      "A Kanban project management app allowing users to create and manage project flows. Built with React, ContextAPI for state management, and Firebase.",
     image: karozImg,
     ghLink: "https://github.com/oalva-rez/karoz/tree/firebase",
     siteLink: "https://karoz-3c7bb.web.app/",

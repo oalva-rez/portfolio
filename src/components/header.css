@@ -80,6 +80,24 @@ nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 400;
+}
+.aphex-mobile {
+  width: 120px;
+  height: auto;
+  position: absolute;
+  top: 12px;
+  left: 50px;
+}
+.cart-icon.cart-mobile {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+.cart-icon.cart-mobile > .cart-qty {
+  top: 10px;
+  right: 10px;
 }
 /* --------------------- Mobile Nav --------------------- */
 

@@ -36,13 +36,13 @@ export default function Header({ isMobile, cartItems }) {
             </li>
             <li
               className={
-                pathname === "/about"
+                pathname === "/beat-store"
                   ? "nav--selected mobile--li"
                   : "mobile--li"
               }
               onClick={closeMenu}
             >
-              <Link to="about">Credits</Link>
+              <Link to="credits">Credits</Link>
             </li>
             <li
               className={
@@ -52,7 +52,7 @@ export default function Header({ isMobile, cartItems }) {
               }
               onClick={closeMenu}
             >
-              <Link to="projects">Licensing</Link>
+              <Link to="licensing">Licensing</Link>
             </li>
             <li
               className={
@@ -66,7 +66,14 @@ export default function Header({ isMobile, cartItems }) {
             </li>
           </ul>
         </Menu>
-        <h1 className="mobile--h1">{formatPathToTitle(pathname)}</h1>
+        <h1 className="mobile--h1">
+          {formatPathToTitle(pathname)}{" "}
+          <img src={logo} alt="aphex" className="aphex-mobile" />
+          <div className="cart-icon cart-mobile">
+            <i className="fa-solid fa-cart-shopping"></i>
+            <div className="cart-qty">{cartItems.length}</div>
+          </div>
+        </h1>
       </header>
     );
   } else {
@@ -78,13 +85,13 @@ export default function Header({ isMobile, cartItems }) {
             <li className="logo">
               <img src={logo} alt="aphex" />
             </li>
-            <li className={pathname === "/" ? "nav--selected" : null}>
+            <li className={pathname === "/beat-store" ? "nav--selected" : null}>
               <Link to="/">Beat Store</Link>
             </li>
-            <li className={pathname === "/about" ? "nav--selected" : null}>
+            <li className={pathname === "/credits" ? "nav--selected" : null}>
               <Link to="about">Credits</Link>
             </li>
-            <li className={pathname === "/projects" ? "nav--selected" : null}>
+            <li className={pathname === "/licensing" ? "nav--selected" : null}>
               <Link to="projects">Licensing</Link>
             </li>
             <li className={pathname === "/contact" ? "nav--selected" : null}>

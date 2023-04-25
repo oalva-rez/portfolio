@@ -1,6 +1,7 @@
 .audio-card {
   background-color: #fff;
   padding: 20px 17px;
+  min-width: 340px;
 }
 .ac-1st {
   display: flex;

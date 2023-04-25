@@ -1,3 +1,4 @@
+// const API_BASE_URL = "https://aphex-api.onrender.com";
 const API_BASE_URL = "http://localhost:3005";
 
 export const getAllProducts = async () => {

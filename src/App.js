@@ -3,15 +3,37 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Contact from "./pages/contact/Contact";
-import Projects from "./pages/projects/Projects";
-import Error from "./pages/404/Error";
 
 function App() {
   const [isMobile, setIsMobile] = useState(
     window.innerWidth < 720 ? true : false
   );
+
+  const [cartItems, setCartItems] = useState(
+    JSON.parse(localStorage.getItem("cartItems")) || []
+  );
+  // Load cart items from local storage when the component mounts
+  useEffect(() => {
+    const storedCartItems = JSON.parse(localStorage.getItem("cartItems"));
+    console.log(storedCartItems);
+    if (storedCartItems) {
+      setCartItems(storedCartItems);
+    }
+  }, []);
+  // Save cart items to local storage when the cart items state changes
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  function addToCart(_id) {
+    // only add cart if it is not already in the cart
+    if (!cartItems.includes(_id)) {
+      setCartItems([...cartItems, _id]);
+    }
+    // have cart items store to localstorage
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }
+  console.log(cartItems);
 
   //choose the screen size
   function handleResize() {
@@ -30,13 +52,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header isMobile={isMobile} />
+        <Header isMobile={isMobile} cartItems={cartItems} />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/projects" element={<Projects />} />
-          <Route exact path="*" element={<Error />} />
+          <Route exact path="/" element={<Home addToCart={addToCart} />} />
         </Routes>
         <Footer />
       </BrowserRouter>

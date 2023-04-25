@@ -1,0 +1,65 @@
+.audio-card {
+  background-color: #fff;
+  padding: 20px 17px;
+}
+.ac-1st {
+  display: flex;
+  margin-bottom: 20px;
+}
+.ac-1st img {
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+}
+.audio-player {
+  width: 250px;
+  height: 40px;
+}
+.ac-info {
+  font-size: 14px;
+  text-align: center;
+}
+
+.ac-2nd {
+  margin-bottom: 20px;
+}
+.ac-title {
+  font-weight: 500;
+}
+
+.ac-3rd {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #00000048;
+  padding-top: 20px;
+  align-items: center;
+}
+.original-price {
+  color: rgb(131, 131, 131);
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: line-through;
+}
+.sale-price {
+  color: #79b42f;
+  font-weight: 700;
+  font-size: 18px;
+}
+.ac-button {
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  border: 1px solid #79b42f;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease; /* Add transition for smooth animation */
+}
+
+.ac-button:active {
+  background-color: #79b42f;
+  color: #fff;
+}
+.ac-button i {
+  font-size: 20px;
+  color: #79b42f;
+}

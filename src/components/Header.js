@@ -1,8 +1,10 @@
 import { React, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Menu from "react-burger-menu/lib/menus/slide";
+import logo from "../assets/aphex-twin.png";
+import aphexLogo from "../assets/aphex-logo.png";
 
-export default function Header({ isMobile }) {
+export default function Header({ isMobile, cartItems }) {
   const { pathname } = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   function handleStateChange(state) {
@@ -30,7 +32,7 @@ export default function Header({ isMobile }) {
               }
               onClick={closeMenu}
             >
-              <Link to="/">Home</Link>
+              <Link to="/">Beat Store</Link>
             </li>
             <li
               className={
@@ -40,7 +42,7 @@ export default function Header({ isMobile }) {
               }
               onClick={closeMenu}
             >
-              <Link to="about">About</Link>
+              <Link to="about">Credits</Link>
             </li>
             <li
               className={
@@ -50,7 +52,7 @@ export default function Header({ isMobile }) {
               }
               onClick={closeMenu}
             >
-              <Link to="projects">Projects</Link>
+              <Link to="projects">Licensing</Link>
             </li>
             <li
               className={
@@ -70,19 +72,33 @@ export default function Header({ isMobile }) {
   } else {
     return (
       <header className="desktop--header">
+        <img src={aphexLogo} alt="aphex" className="aphex-logo" />
         <nav>
           <ul>
+            <li className="logo">
+              <img src={logo} alt="aphex" />
+            </li>
             <li className={pathname === "/" ? "nav--selected" : null}>
-              <Link to="/">Home</Link>
+              <Link to="/">Beat Store</Link>
             </li>
             <li className={pathname === "/about" ? "nav--selected" : null}>
-              <Link to="about">About</Link>
+              <Link to="about">Credits</Link>
             </li>
             <li className={pathname === "/projects" ? "nav--selected" : null}>
-              <Link to="projects">Projects</Link>
+              <Link to="projects">Licensing</Link>
             </li>
             <li className={pathname === "/contact" ? "nav--selected" : null}>
               <Link to="contact">Contact</Link>
+            </li>
+            <li>
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li className="cart-icon">
+              <i className="fa-solid fa-cart-shopping"></i>
+              <div className="cart-qty">{cartItems.length}</div>
+            </li>
+            <li>
+              <button className="free-beats">Get Free Beats</button>
             </li>
           </ul>
         </nav>

@@ -1,10 +1,21 @@
 header {
-  background: rgb(0, 0, 0);
-  background: var(--black-gradient);
   display: grid;
-  border-bottom: 1px solid rgb(29, 29, 29);
   position: relative;
   z-index: 999;
+}
+.logo img {
+  width: 120px;
+  height: auto;
+}
+.logo {
+  flex: 1;
+}
+.aphex-logo {
+  position: absolute;
+  width: 270px;
+  height: auto;
+  bottom: -44px;
+  left: 6%;
 }
 .desktop--header {
   place-content: center;
@@ -12,32 +23,63 @@ header {
 nav ul {
   display: flex;
   justify-content: center;
-  padding-left: 30px;
-  gap: 5rem;
+  align-items: center;
   list-style: none;
+  margin-top: 20px;
+  width: 80vw;
 }
-
+.fa-magnifying-glass {
+  font-size: 1.3rem;
+}
+.free-beats {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #ab4bd9;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
 nav ul a {
   text-decoration: none;
-  color: white;
   font-weight: 400;
+  color: black;
 }
 
 nav ul li {
   position: relative;
+  flex: 1;
+  text-align: center;
 }
-.nav--selected a::before {
-  content: "• ";
-  color: var(--accent-color);
-  left: -10px;
-  top: -1px;
-  position: absolute;
-}
+
 .mobile--h1 {
   text-align: center;
-  color: white;
   font-size: 16px;
   font-weight: 700;
+}
+.fa-cart-shopping {
+  font-size: 1.6rem;
+  color: black;
+  cursor: pointer;
+}
+.cart-icon {
+  flex: 0.5;
+  position: relative;
+}
+.cart-qty {
+  position: absolute;
+  top: 12px;
+  right: 27px;
+  background-color: #ab4bd9;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* --------------------- Mobile Nav --------------------- */
 
@@ -51,7 +93,7 @@ nav ul li {
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: white;
+  background: black;
 }
 
 /* Position and sizing of clickable cross button */
@@ -77,11 +119,7 @@ nav ul li {
 /* General sidebar styles */
 .bm-menu {
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 13%,
-    rgba(74, 74, 74, 1) 100%
-  );
+  background: lightgray;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -103,7 +141,8 @@ nav ul li {
 }
 .bm-item a {
   font-size: 1.6rem;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
+  color: black;
 }
 .bm-item a::before {
   left: -17px;
@@ -124,12 +163,8 @@ nav ul li {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--accent-color);
+    background-color: black;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-  }
-  nav ul a:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
   }
 }

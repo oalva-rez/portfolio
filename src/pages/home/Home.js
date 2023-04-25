@@ -1,74 +1,143 @@
-import React from "react";
-import ozkar from "../../assets/ozkar.webp";
-import react from "../../assets/reactjsBG.png";
-import nodejs from "../../assets/nodejsBG.png";
-import express from "../../assets/express.png";
-import mongodb from "../../assets/mongodb.png";
-import mysql from "../../assets/mysql.png";
-import ts from "../../assets/typescript.png";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { getSaleProducts } from "../../AphexLibrary";
 
-export default function Home() {
-  const navigate = useNavigate();
+import AudioCard from "../../components/AudioCard";
+import audioGuy from "../../assets/audio-guy.jpg";
+import aff1 from "../../assets/aff1.png";
+import aff2 from "../../assets/aff2.png";
+import aff3 from "../../assets/aff3.png";
+import aff4 from "../../assets/aff4.svg";
+import aff5 from "../../assets/aff5.svg";
+import aff6 from "../../assets/aff6.svg";
+
+export default function Home({ addToCart }) {
+  const audioData = [
+    {
+      _id: 1,
+      audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      title: "Solid Wall of Sound",
+      artist: "Aphex Twin",
+      originalPrice: "$25",
+      salePrice: "$9",
+      image: "https://picsum.photos/55/55",
+      genre: "Hip Hop",
+      bpm: "130",
+      key: "D# Minor",
+      createdAt: "2021-05-01T00:00:00.000Z",
+    },
+    {
+      _id: 2,
+      audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      title: "Wild Things",
+      artist: "Aphex Twin",
+      originalPrice: "$45",
+      salePrice: "$18",
+      image: "https://picsum.photos/55/55",
+      genre: "R&B",
+      bpm: "120",
+      key: "E Major",
+      createdAt: "2021-05-01T00:00:00.000Z",
+    },
+    {
+      _id: 3,
+      audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      title: "The World Is Yours",
+      artist: "Aphex Twin",
+      originalPrice: "$37",
+      salePrice: "$17",
+      image: "https://picsum.photos/55/55",
+      genre: "Hip Hop",
+      bpm: "145",
+      key: "A Minor",
+      createdAt: "2021-05-01T00:00:00.000Z",
+    },
+  ];
+  const [saleItems, setSaleItems] = useState([]);
+
+  useEffect(() => {
+    const fetchSaleProducts = async () => {
+      const data = await getSaleProducts();
+      console.log(data);
+      setSaleItems(data);
+    };
+    fetchSaleProducts();
+  }, []);
+
   return (
     <main className="home--container">
       <Helmet>
-        <title>Ozkar Alvarez</title>
-        <meta
-          name="description"
-          content="Get to know Ozkar Alvarez's Web Development journey. 
-          I am a web developer with experience in building responsive, user-friendly websites and web applications.
-          From HTML and CSS to JavaScript and React, I have a diverse skill set that allows me to deliver 
-          projects of varying complexity. Browse my portfolio to see some of my recent work, and feel 
-          free to contact me to discuss potential collaborations."
-        />
+        <title>Aphex Twin Beat Store</title>
+        <meta name="description" content="" />
       </Helmet>
-      <section className="home--text">
-        <h1>
-          Hey there 👋
-          <br />I am
-          <span> Ozkar&nbsp;Alvarez</span>
+      <section>
+        <div className="home--decal">Mix Master Record</div>
+        <h1 className="home--heading">
+          <span className="gradient">
+            ENGINEER AND <br></br>PRODUCER
+          </span>{" "}
+          BASED<br></br> IN SAN DIEGO
         </h1>
-        <p>
-          Fullstack Developer, passionate about learning new things and sharing
-          my knowledge with others. I love to create things that live on the
-          internet, whether that be websites, applications, or anything in
-          between. My goal is to always build products that provide
-          pixel-perfect, performant experiences.
+        <p className="home--text">
+          Discover Masterful Beats from a San Diego-Based Music Producer and
+          Engineer. Whether you're a seasoned artist or just starting out, our
+          beats are the perfect foundation for your next hit. Elevate Your Sound
+          Today.
         </p>
-
         <div className="home--buttons">
-          <button onClick={() => navigate("/about")}>About me</button>
-          <button onClick={() => navigate("/projects")}>Projects</button>
+          <button>BEAT STORE</button>
+          <button>LICENSING</button>
         </div>
-        <hr />
-        <h2 className="home--tech-heading">Ozkar's Choice</h2>
-
-        <ul className="home--tech">
-          <li>
-            <img src={ts} alt="typescript" title="Typescript" />
-          </li>
-          <li>
-            <img src={react} alt="react" title="React" />
-          </li>
-          <li>
-            <img src={nodejs} alt="nodejs" title="NodeJS" />
-          </li>
-          <li>
-            <img src={express} alt="express" title="Express" />
-          </li>
-          <li>
-            <img src={mongodb} alt="mongodb" title="MongoDB" />
-          </li>
-          <li>
-            <img src={mysql} alt="mysql" title="MySQL" />
-          </li>
-        </ul>
       </section>
-      <div className="home--image">
-        <img src={ozkar} alt="ozkar" className="ozkar-headshot" />
-      </div>
+      <section className="home--sale">
+        <h2 className="sale-heading">Beats Under $20</h2>
+        <div className="sale-content">
+          <div className="sale-text">
+            <h3>Don't let high prices cut your dreams short.</h3>
+            <button>Browse sale</button>
+          </div>
+          <div className="sale-items">
+            {saleItems.map((data, index) => (
+              <AudioCard
+                _id={data.mp3Id._id}
+                audio={data.mp3Id.audio}
+                title={data.mp3Id.title}
+                artist={data.mp3Id.artist}
+                originalPrice={data.mp3Id.price}
+                salePrice={data.salePrice}
+                image={data.mp3Id.image}
+                genre={data.mp3Id.genre}
+                bpm={data.mp3Id.bpm}
+                songKey={data.mp3Id.key}
+                key={index + data.mp3Id.title}
+                addToCart={addToCart}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="about-section">
+        <div className="about-image">
+          <img src={audioGuy} alt="" />
+          <div className="image-outline"></div>
+        </div>
+        <div className="about-text">
+          <h4>From the first to last step</h4>
+          <p>
+            Aphex Twin is the only producer of their kind that offers you
+            everything you need to launch, refine and present your creative
+            product from the first to the last step.
+          </p>
+        </div>
+      </section>
+      <section className="affiliates">
+        <img src={aff1} alt="" />
+        <img src={aff2} alt="" />
+        <img src={aff3} alt="" />
+        <img src={aff4} alt="" />
+        <img src={aff5} alt="" />
+        <img src={aff6} alt="" />
+      </section>
     </main>
   );
 }

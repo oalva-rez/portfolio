@@ -5,6 +5,7 @@ import "./components/header.css";
 import "./components/footer.css";
 import "./pages/home/home.css";
 import "./components/audioCard.css";
+import "./components/prodDetail.css";
 
 import App from "./App";
 

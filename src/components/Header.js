@@ -79,11 +79,15 @@ export default function Header({ isMobile, cartItems }) {
   } else {
     return (
       <header className="desktop--header">
-        <img src={aphexLogo} alt="aphex" className="aphex-logo" />
+        <a href="/">
+          <img src={aphexLogo} alt="aphex" className="aphex-logo" />
+        </a>
         <nav>
           <ul>
             <li className="logo">
-              <img src={logo} alt="aphex" />
+              <a href="/">
+                <img src={logo} alt="aphex" />
+              </a>
             </li>
             <li className={pathname === "/beat-store" ? "nav--selected" : null}>
               <Link to="/">Beat Store</Link>

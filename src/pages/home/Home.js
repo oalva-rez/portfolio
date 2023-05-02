@@ -56,12 +56,15 @@ export default function Home({ addToCart }) {
   const [saleItems, setSaleItems] = useState([]);
 
   useEffect(() => {
-    const fetchSaleProducts = async () => {
-      const data = await getSaleProducts();
-      console.log(data);
-      setSaleItems(data);
-    };
-    fetchSaleProducts();
+    try {
+      const fetchSaleProducts = async () => {
+        const data = await getSaleProducts();
+        setSaleItems(data);
+      };
+      fetchSaleProducts();
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   return (
@@ -110,6 +113,7 @@ export default function Home({ addToCart }) {
                 bpm={data.mp3Id.bpm}
                 songKey={data.mp3Id.key}
                 key={index + data.mp3Id.title}
+                slug={data.mp3Id.slug}
                 addToCart={addToCart}
               />
             ))}

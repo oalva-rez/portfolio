@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/home/Home";
+import ProdDetail from "./components/ProdDetail";
 
 function App() {
   const [isMobile, setIsMobile] = useState(
@@ -15,7 +16,6 @@ function App() {
   // Load cart items from local storage when the component mounts
   useEffect(() => {
     const storedCartItems = JSON.parse(localStorage.getItem("cartItems"));
-    console.log(storedCartItems);
     if (storedCartItems) {
       setCartItems(storedCartItems);
     }
@@ -33,7 +33,6 @@ function App() {
     // have cart items store to localstorage
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }
-  console.log(cartItems);
 
   //choose the screen size
   function handleResize() {
@@ -55,6 +54,10 @@ function App() {
         <Header isMobile={isMobile} cartItems={cartItems} />
         <Routes>
           <Route exact path="/" element={<Home addToCart={addToCart} />} />
+          <Route
+            path="/audio/:id"
+            element={<ProdDetail addToCart={addToCart} />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>

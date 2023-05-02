@@ -12,6 +12,7 @@ function AudioCard({
   genre,
   bpm,
   songKey,
+  slug,
   addToCart,
 }) {
   return (
@@ -31,7 +32,9 @@ function AudioCard({
         </div>
       </div>
       <div className="ac-2nd">
-        <p className="ac-title">{title}</p>
+        <a href={`/audio/${slug}`} className="ac-title">
+          {title}
+        </a>
         <p>
           By {artist} in <u>{genre}</u>
         </p>
